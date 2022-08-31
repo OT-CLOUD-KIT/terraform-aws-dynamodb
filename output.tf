@@ -6,7 +6,7 @@ output "main-table-arn" {
   value = aws_dynamodb_table.main-table.arn
 }
 
-output "table_name" {
+output "table-name" {
   value = aws_dynamodb_table.main-table.name
 }
 

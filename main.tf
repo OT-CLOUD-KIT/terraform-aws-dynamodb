@@ -54,7 +54,6 @@ resource "aws_dynamodb_table" "main-table" {
     {
       Name        = var.table_name
       environment = var.environment
-
     },
     var.tags,
   )

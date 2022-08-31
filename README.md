@@ -44,13 +44,13 @@ module "dynamodb_table" {
 | attributes | Additional attributes (e.g. `policy` or `role`) | `list(string)` | `"orderId" "customerId" "Shipped"` | yes |
 | write_capacity_main-table | write capacity of mian table in the form of a number | `number` | `2` | yes |
 | read_capacity_main-table| read capacity of main table in the form of a number | `number` | `2` | yes ||
-| hash_key | DynamoDB table Hash Key | `string` | `orderId` | yes |
+| hash_key | DynamoDB table Hash Key in the form of a string | `string` | `orderId` | yes |
 | hash_key_type | Hash Key type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data | `string` | `S` | yes |
 | billing_mode| billing mode required in the form of a string | `string` |`"PROVISIONED"`| no |
 | table_name | table Name  | `string` | `shipping` | yes |
 | range_key | DynamoDB table Range Key | `string` | `customerId`| yes |
 | range_key_type | Range Key type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data | `string` | `S` | yes |
-| stream_enabled | stream enabled, yes or no in form of a bool  | `bool` | `false` | yes |
+| stream_enabled | stream enabled, yes or no in the form of a bool  | `bool` | `false` | yes |
 | stream_view_type | stream view type in the form of a string  | `string` | `"NEW_AND_OLD_IMAGES"` | yes |
 | ttl_enabled | ttl enabled, yes or no in the form of a bool  | `bool` | `false` | yes |
 | ttl_attribute_name | ttl attribute name, in the form of a string  | `string`|  `"ttl"` | yes |

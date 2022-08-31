@@ -1,6 +1,6 @@
 variable "environment" {
   type        = string
-  description = "The environment for the infrastrcutrue (dev, test, prod)"
+  description = "The environment for the infrastrcutrue (dev)"
   default     = "dev"
 }
 

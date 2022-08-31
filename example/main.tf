@@ -18,5 +18,4 @@ module "dynamodb_table" {
   local_secondary_indexes        = var.local_secondary_indexes
   global_secondary_indexes       = var.global_secondary_indexes
   tags                           = var.tags
-
 }

@@ -8,9 +8,9 @@ write_capacity_main-table      = 2
 hash_key                       = "orderId"
 range_key                      = "customerId"
 stream_enabled                 = false
-stream_view_type               = ""
+stream_view_type               = "NEW_AND_OLD_IMAGES"
 ttl_enabled                    = false
-ttl_attribute_name             = ""
+ttl_attribute_name             = "ttl"
 point_in_time_recovery_enabled = false
 attributes = [
   {
