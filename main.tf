@@ -36,7 +36,6 @@ resource "aws_dynamodb_table" "main-table" {
     }
   }
 
-
   dynamic "global_secondary_index" {
     for_each = var.global_secondary_indexes
 
@@ -50,12 +49,13 @@ resource "aws_dynamodb_table" "main-table" {
       non_key_attributes = lookup(global_secondary_index.value, "non_key_attributes", null)
     }
   }
+
   tags = merge(
     {
-      Name = var.table_name
+      Name        = var.table_name
       environment = var.environment
 
     },
     var.tags,
-    )
+  )
 }

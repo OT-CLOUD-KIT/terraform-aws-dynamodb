@@ -15,7 +15,7 @@ variable "region" {
 
 variable "billing_mode" {
   type        = string
-  description = "billing_mode"
+  description = "billing mode"
 }
 
 variable "read_capacity_main-table" {
@@ -50,12 +50,12 @@ variable "stream_view_type" {
 
 variable "ttl_enabled" {
   type        = bool
-  description = "ttl enable yes or no"
+  description = "Time to Live enable yes or no"
 }
 
 variable "ttl_attribute_name" {
   type        = string
-  description = "ttl attribute name"
+  description = "Time to Live attribute name"
 }
 
 variable "point_in_time_recovery_enabled" {
@@ -75,12 +75,12 @@ variable "attributes" {
 
 variable "global_secondary_indexes" {
   type        = any
-  description = " (Optional) Provide Global secondary indexes for a table"
+  description = "(Optional) Provide Global secondary indexes for a table"
 }
 
 variable "local_secondary_indexes" {
   type        = any
-  description = " (Optional) Provide local secondary indexes for a table"
+  description = "(Optional) Provide local secondary indexes for a table"
 }
 
 variable "enable_dynamodb_table_resource" {

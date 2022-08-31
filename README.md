@@ -51,10 +51,10 @@ module "dynamodb_table" {
 | range_key | DynamoDB table Range Key | `string` | `customerId`| yes |
 | range_key_type | Range Key type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data | `string` | `S` | yes |
 | stream_enabled | stream enabled, yes or no in form of a bool  | `bool` | `false` | yes |
-| stream_view_type | stream view type in form of a string  | `string` | `"NEW_AND_OLD_IMAGES"` | yes |
-| ttl_enabled | ttl enabled, yes or no in form of a bool  | `bool` | `false` | yes |
-| ttl_attribute_name | ttl attribute name, in form of a string  | `string`|  `"ttl"` | yes |
-| point_in_time_recovery_enabled | point_in_time_recovery_enabled , yes or no in form of a bool  | `bool` | `false` | yes |
+| stream_view_type | stream view type in the form of a string  | `string` | `"NEW_AND_OLD_IMAGES"` | yes |
+| ttl_enabled | ttl enabled, yes or no in the form of a bool  | `bool` | `false` | yes |
+| ttl_attribute_name | ttl attribute name, in the form of a string  | `string`|  `"ttl"` | yes |
+| point_in_time_recovery_enabled | point in time recovery enabled , yes or no in the form of a bool  | `bool` | `false` | yes |
 | local_secondary_indexes | local secondary indexes in the form of any  | `any` | `name = "lsi-orderId-customerId"`, <br> `range_key = "customerId"`, <br>  `projection_type   = "ALL"`, <br>  `non_key_attributes = []`| yes |
 | global_secondary_indexes | global secondary indexes in the form of any  | `any` | `name = "TitleIndex"`,<br> `hash_key = "orderId"`,<br> `range_key = "shipped"`,<br> `projection_type = "ALL"`,<br> `read_capacity = 5`,<br> `write_capacity = 5`,<br> `non_key_attributes = []`| yes |
 | environment | environment required in the form of a string| `string` | `"dev"` | yes |
