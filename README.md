@@ -13,7 +13,7 @@
 
 ```hcl
 module "dynamodb_table" {
-  source                                 = "git::https://github.com/OT-CLOUD-KIT/terraform-aws-dynamodb.git"
+  source                                 = "OT-CLOUD-KIT/dynamodb/aws"
   environment                            = var.environment
   count                                  = var.enable_dynamodb_table_resource == true ? 1 : 0
   table_name                             = var.table_name
