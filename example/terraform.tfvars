@@ -1,6 +1,5 @@
 environment                    = "dev"
 enable_dynamodb_table_resource = true
-table_name                     = "shri"
 region                         = "us-east-1"
 billing_mode                   = "PROVISIONED"
 read_capacity_main-table       = 2
@@ -47,7 +46,24 @@ global_secondary_indexes = [
     non_key_attributes = []
   }
 ]
-tags = {
-  "team" : "devops"
-  "service" : "dynamodb"
-}
+
+
+################# Naming Convension #####################
+
+random_alphanumeric_len = 4
+
+bu       = "ot"
+app      = "bp"
+env      = "d"
+resource = "dynomodb"
+tenant   = ""
+
+special = false
+upper   = false
+number  = true
+
+gen_no_of_names = 1
+
+team    = "infra"
+program = "ot"
+

@@ -1,6 +1,6 @@
 
-resource "aws_dynamodb_table" "main-table" {
-  name             = var.table_name
+resource "aws_dynamodb_table" "main_table" {
+  name             = "${local.base_name}-dynamodb-table"
   billing_mode     = var.billing_mode
   read_capacity    = var.read_capacity_main-table
   write_capacity   = var.write_capacity_main-table
@@ -50,11 +50,11 @@ resource "aws_dynamodb_table" "main-table" {
     }
   }
 
+ 
   tags = merge(
     {
-      Name        = var.table_name
-      environment = var.environment
+      Name = "${local.base_name}-dynamodb-table"
     },
-    var.tags,
+    local.common_tags,
   )
 }
