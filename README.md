@@ -12,7 +12,10 @@
 
 
 ## Architecture
+<img width="1219" height="598" alt="Screenshot from 2025-07-16 14-20-19" src="https://github.com/user-attachments/assets/73ac5937-da6f-4e4e-b6f2-acc8fc42e8f0" />
 
+
+___
 
 ## Usage
 
@@ -70,7 +73,6 @@ module "dynamodb_table" {
   ]
 }
 
-```
 ```
 > **Note:**  
 > The above example demonstrates how to use the module. All variables, resources, and outputs used here are already defined within this module.
