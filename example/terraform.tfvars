@@ -1,6 +1,5 @@
 environment                    = "dev"
 enable_dynamodb_table_resource = true
-table_name                     = "shri"
 region                         = "us-east-1"
 billing_mode                   = "PROVISIONED"
 read_capacity_main-table       = 2
@@ -47,7 +46,11 @@ global_secondary_indexes = [
     non_key_attributes = []
   }
 ]
-tags = {
-  "team" : "devops"
-  "service" : "dynamodb"
-}
+
+
+################# Naming Convension #####################
+
+env = "dev"
+owner = "opstree"
+app = "otcloud-kit"
+

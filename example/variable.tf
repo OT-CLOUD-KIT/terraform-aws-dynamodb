@@ -3,10 +3,6 @@ variable "environment" {
   description = "The environment for the infrastrcutrue (dev)"
 }
 
-variable "table_name" {
-  type        = string
-  description = "The name of the table"
-}
 
 variable "region" {
   type        = string
@@ -63,10 +59,7 @@ variable "point_in_time_recovery_enabled" {
   description = "point in time recovery enabled"
 }
 
-variable "tags" {
-  type        = map(string)
-  description = "(Required) tags"
-}
+
 
 variable "attributes" {
   type        = list(map(string))
@@ -86,4 +79,23 @@ variable "local_secondary_indexes" {
 variable "enable_dynamodb_table_resource" {
   type        = bool
   description = "need to create dynamodb resource yes or no"
+}
+
+################################# Naming Convention Variables #########################################
+
+variable "env" {
+  type = string
+  default = "dev"
+  
+}
+
+variable "owner" {
+  type = string
+  default = "opstree"
+}
+
+variable "app" {
+  type = string
+  default = "otcloud-kit"
+  
 }
